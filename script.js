@@ -226,6 +226,133 @@ window.addEventListener(
   { passive: true }
 );
 
+
+
+function initKeywordSphere() {
+  const container = document.getElementById("sphere-container");
+  if (!container) return;
+
+  const canvas = document.createElement("canvas");
+  canvas.style.cssText = "position:absolute;inset:0;width:100%;height:100%;display:block;";
+  const ctx = canvas.getContext("2d");
+  container.appendChild(canvas);
+
+  let W, H, cx, cy, sphereR, time = 0, cycleIdx = 0, cycleTimer = 0;
+
+  const groups = [
+    { words: ["\u7269\u4ef6","\u62c6\u89e3","\u94a5\u5319","\u5165\u53e3"], aOff: 0, rOff: 1.5 },
+    { words: ["\u8bed\u4e49","\u52a8\u8bcd","\u77e9\u9635","\u6269\u5c55"], aOff: Math.PI/4, rOff: 1.6 },
+    { words: ["\u4ea7\u54c1","\u6536\u675f","\u65b9\u5411","\u6253\u5370"], aOff: Math.PI/2, rOff: 1.7 },
+    { words: ["\u7a7a\u95f4","\u8c03\u7814","\u6536\u7eb3","\u51fa\u79df"], aOff: 3*Math.PI/4, rOff: 1.55 },
+    { words: ["\u60c5\u7eea","\u673a\u5173","\u754c\u9762","\u529f\u80fd"], aOff: Math.PI, rOff: 1.65 },
+    { words: ["\u843d\u5730","\u9a8c\u8bc1","\u53cc\u7ebf","\u88c5\u9970"], aOff: 5*Math.PI/4, rOff: 1.6 },
+    { words: ["\u89e3\u57df","\u7ed3\u57df","\u8bbe\u8ba1","\u7814\u7a76"], aOff: 3*Math.PI/2, rOff: 1.45 },
+    { words: ["\u7ed3\u6784","\u6750\u6599","\u52a8\u4f5c","\u4f53\u9a8c"], aOff: 7*Math.PI/4, rOff: 1.75 },
+  ];
+
+  function resize() {
+    const rect = container.getBoundingClientRect();
+    W = canvas.width = rect.width || 600;
+    H = canvas.height = rect.height || 500;
+    cx = W / 2; cy = H / 2;
+    sphereR = Math.min(W, H) * 0.28;
+  }
+
+  function rotX(x, y, z, a) { const c=Math.cos(a),s=Math.sin(a); return [x, y*c-z*s, y*s+z*c]; }
+  function rotY(x, y, z, a) { const c=Math.cos(a),s=Math.sin(a); return [x*c+z*s, y, -x*s+z*c]; }
+  function proj(x, y, z) {
+    const fov = 400, s = fov/(fov+z);
+    return [x*s+cx, -y*s+cy, s];
+  }
+
+  function draw() {
+    ctx.clearRect(0,0,W,H);
+    const rY = time*0.12, rX = Math.sin(time*0.06)*0.25;
+
+    // Wireframe sphere
+    const latN=10, lonN=14;
+    // Lat lines
+    for (let i=1; i<latN; i++) {
+      const th = i/latN*Math.PI;
+      ctx.beginPath();
+      for (let j=0; j<=lonN*2; j++) {
+        const ph = j/(lonN*2)*Math.PI*2;
+        let x=sphereR*Math.sin(th)*Math.cos(ph), y=sphereR*Math.cos(th), z=sphereR*Math.sin(th)*Math.sin(ph);
+        [x,y,z]=rotX(x,y,z,rX); [x,y,z]=rotY(x,y,z,rY);
+        const [px,py]=proj(x,y,z);
+        j===0?ctx.moveTo(px,py):ctx.lineTo(px,py);
+      }
+      ctx.strokeStyle="rgba(85,226,216,0.13)";
+      ctx.lineWidth=0.5;
+      ctx.stroke();
+    }
+    // Lon lines
+    for (let i=0; i<lonN; i++) {
+      const ph = i/lonN*Math.PI*2;
+      ctx.beginPath();
+      for (let j=0; j<=360; j+=4) {
+        const th=j*Math.PI/180;
+        let x=sphereR*Math.sin(th)*Math.cos(ph), y=sphereR*Math.cos(th), z=sphereR*Math.sin(th)*Math.sin(ph);
+        [x,y,z]=rotX(x,y,z,rX); [x,y,z]=rotY(x,y,z,rY);
+        const [px,py]=proj(x,y,z);
+        j===0?ctx.moveTo(px,py):ctx.lineTo(px,py);
+      }
+      ctx.strokeStyle="rgba(85,226,216,0.10)";
+      ctx.lineWidth=0.5;
+      ctx.stroke();
+    }
+    // Glow dots at nodes
+    for (let i=0; i<=latN; i++) {
+      const th=i/latN*Math.PI;
+      for (let j=0; j<lonN; j++) {
+        const ph=j/lonN*Math.PI*2;
+        let x=sphereR*Math.sin(th)*Math.cos(ph), y=sphereR*Math.cos(th), z=sphereR*Math.sin(th)*Math.sin(ph);
+        [x,y,z]=rotX(x,y,z,rX); [x,y,z]=rotY(x,y,z,rY);
+        const [px,py,sc]=proj(x,y,z);
+        const a=(z+sphereR*2)/(sphereR*3);
+        ctx.fillStyle="rgba(168,255,104,"+(a*0.5)+")";
+        ctx.beginPath(); ctx.arc(px,py,1.8*sc,0,Math.PI*2); ctx.fill();
+      }
+    }
+
+    // Cycle keywords
+    cycleTimer+=0.016;
+    if (cycleTimer>3.2) { cycleTimer=0; cycleIdx=(cycleIdx+1)%4; }
+
+    const wR = sphereR*1.5;
+    // calc & sort by depth
+    const items = groups.map(g=>{
+      const a = g.aOff+time*0.07;
+      let x=Math.cos(a)*wR, z=Math.sin(a)*wR, y=Math.sin(a*0.6)*wR*0.25;
+      [x,y,z]=rotX(x,y,z,rX); [x,y,z]=rotY(x,y,z,rY);
+      const [px,py,sc]=proj(x,y,z);
+      return {px,py,sc,z,g};
+    }).sort((a,b)=>a.z-b.z);
+
+    for (const it of items) {
+      const a=(it.z+wR*2)/(wR*3);
+      if (a<0.06) continue;
+      const word = it.g.words[cycleIdx];
+      const sz = 13+a*7;
+      ctx.font="bold "+sz.toFixed(1)+'px "Microsoft YaHei","PingFang SC",sans-serif';
+      ctx.textAlign="center"; ctx.textBaseline="middle";
+      ctx.shadowColor="rgba(85,226,216,0.25)";
+      ctx.shadowBlur=10*a;
+      ctx.fillStyle="rgba(255,246,204,"+a.toFixed(2)+")";
+      ctx.fillText(word, it.px, it.py);
+      ctx.shadowBlur=0;
+    }
+
+    time+=0.016;
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  const ro = new ResizeObserver(resize); ro.observe(container);
+  draw();
+}
+
+
 function startCircuitCanvas() {
   const canvas = document.getElementById("circuitCanvas");
   if (!canvas) return;
@@ -306,3 +433,4 @@ setDomain(0);
 setUnlock(0);
 updateScrollProgress();
 startCircuitCanvas();
+initKeywordSphere();
