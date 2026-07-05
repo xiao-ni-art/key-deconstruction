@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 01 | 钥匙的物件拆解</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="circuitCanvas" aria-hidden="true"></canvas>
+    <div class="scroll-meter" aria-hidden="true"><span></span></div>
+
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="回到首页">
+        <span class="brand-mark">W01</span>
+        <span>钥匙解域</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="./index.html">首页</a>
+        <a href="./week1.html">Week 01</a>
+        <a href="./week2.html">Week 02</a>
+        <a href="./week3.html">Week 03</a>
+        <a href="./week4.html">Week 04</a>
+        <a href="./week5.html">Week 05</a>
+        <a href="./week6.html">Week 06</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero stage page-hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Week 01 / Object Deconstruction</p>
+          <h1>第一周：把钥匙拆到不能再普通。</h1>
+          <p class="hero-lead">
+            第一周的任务不是马上做产品，而是先把“钥匙”从日常印象里拿出来。它看起来只是一个开门工具，但其实包含结构、材料、工艺、动作、情绪、身份和场景。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="./week2.html">
+              <span class="action-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 12h13m0 0-5-5m5 5-5 5" /></svg>
+              </span>
+              下一周：语义扩展
+            </a>
+            <a class="ghost-action" href="./index.html">
+              <span class="action-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" /></svg>
+              </span>
+              返回首页
+            </a>
+          </div>
+        </div>
+        <figure class="source-map page-figure reveal">
+          <img src="./assets/week1-map.jpg" alt="第一周钥匙主题解域过程原始思维导图" />
+          <figcaption>Week 01 Source Map / 物件拆解与初步解域</figcaption>
+        </figure>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Assignment Translation</p>
+          <h2>我把第一周理解为：先建立一把钥匙的“底层数据库”。</h2>
+        </div>
+        <div class="insight-grid">
+          <article class="insight-card reveal">
+            <span class="index">01</span>
+            <h3>结构数据库</h3>
+            <p>手柄决定握持方式，匙身决定插入方向，牙花决定匹配逻辑，挂孔决定携带方式。钥匙的每一处形态都有功能理由。</p>
+          </article>
+          <article class="insight-card reveal">
+            <span class="index">02</span>
+            <h3>材料数据库</h3>
+            <p>金属带来冷硬、安全和耐久；塑料带来轻量、颜色和低成本；柔性材料能改变触感和保护方式。</p>
+          </article>
+          <article class="insight-card reveal">
+            <span class="index">03</span>
+            <h3>动作数据库</h3>
+            <p>插入、旋转、听见咔嗒声、推门进入，这一连串动作形成了钥匙的仪式感，也给后续互动产品提供了线索。</p>
+          </article>
+          <article class="insight-card reveal">
+            <span class="index">04</span>
+            <h3>情绪数据库</h3>
+            <p>钥匙让人产生安全感、归属感和拥有感。它小到可以放进口袋，却代表一个空间是否属于我。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Early Product Clues</p>
+          <h2>第一周形成的是“产品线索”，不是最终方案。</h2>
+        </div>
+        <div class="design-grid">
+          <article class="design-card reveal">
+            <span class="index">A</span>
+            <h3>握持与身份</h3>
+            <p>从钥匙手柄出发，思考可定制的握持形态。不同颜色、纹理和轮廓可以让钥匙成为个人身份的随身标记。</p>
+            <dl>
+              <div><dt>提取元素</dt><dd>手柄 / 触感 / 挂孔</dd></div>
+              <div><dt>产品线索</dt><dd>个性化挂件、识别钥匙套</dd></div>
+            </dl>
+          </article>
+          <article class="design-card reveal">
+            <span class="index">B</span>
+            <h3>牙花与匹配</h3>
+            <p>钥匙的牙花本质上是一种匹配规则。它可以转译成拼插、卡扣、关卡和模块化玩具的结构逻辑。</p>
+            <dl>
+              <div><dt>提取元素</dt><dd>牙花 / 插入 / 对齐</dd></div>
+              <div><dt>产品线索</dt><dd>解锁玩具、教学机关</dd></div>
+            </dl>
+          </article>
+          <article class="design-card reveal">
+            <span class="index">C</span>
+            <h3>旋转与反馈</h3>
+            <p>开锁时的旋转动作和声音反馈很有仪式感，可以转译成灯光、声音、按钮或学习任务的触发方式。</p>
+            <dl>
+              <div><dt>提取元素</dt><dd>旋转 / 咔嗒声 / 触发</dd></div>
+              <div><dt>产品线索</dt><dd>互动装置、知识钥匙</dd></div>
+            </dl>
+          </article>
+          <article class="design-card reveal">
+            <span class="index">D</span>
+            <h3>携带与收纳</h3>
+            <p>钥匙天然具有随身属性，它可以连接收纳、挂载和防丢功能，为后续折叠盒、钥匙盒和模块容器提供基础。</p>
+            <dl>
+              <div><dt>提取元素</dt><dd>挂孔 / 随身 / 防丢</dd></div>
+              <div><dt>产品线索</dt><dd>便携容器、模块收纳</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section class="process section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Process Engine</p>
+          <h2>从物件到概念，我用了五步拆解。</h2>
+        </div>
+
+        <div class="process-shell reveal">
+          <div class="process-rail" role="tablist" aria-label="解域流程">
+            <button class="step-button is-active" type="button" data-step="0" role="tab" aria-selected="true">日常物件</button>
+            <button class="step-button" type="button" data-step="1" role="tab" aria-selected="false">解构分析</button>
+            <button class="step-button" type="button" data-step="2" role="tab" aria-selected="false">意义发散</button>
+            <button class="step-button" type="button" data-step="3" role="tab" aria-selected="false">功能转译</button>
+            <button class="step-button" type="button" data-step="4" role="tab" aria-selected="false">产品生成</button>
+          </div>
+
+          <div class="process-stage">
+            <article class="step-card" id="stepCard">
+              <p class="eyebrow" id="stepKicker">Step 01</p>
+              <h3 id="stepTitle">日常物件：钥匙</h3>
+              <p id="stepBody">从手柄、匙身、牙花、挂孔、材料与开锁动作进入观察，保留它作为“入口”的核心身份。</p>
+              <div class="tag-row" id="stepTags" aria-label="关键词"></div>
+            </article>
+
+            <div class="lock-lab" aria-hidden="true">
+              <div class="lock-face">
+                <span class="pin pin-1"></span>
+                <span class="pin pin-2"></span>
+                <span class="pin pin-3"></span>
+                <span class="pin pin-4"></span>
+              </div>
+              <svg class="lab-key" viewBox="0 0 560 160">
+                <path d="M50 80a46 46 0 1 1 92 0 46 46 0 0 1-92 0Zm28 0a18 18 0 1 0 36 0 18 18 0 0 0-36 0Zm70-10h252l32-28h38l-24 34 30 28h-45l-24-24-30 26h-43l22-30H148z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="domain section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Domain Map</p>
+          <h2>我把钥匙拆成七个可以继续连接的域。</h2>
+        </div>
+
+        <div class="domain-layout reveal">
+          <div class="radar" aria-label="钥匙解域节点">
+            <svg class="radar-lines" viewBox="0 0 620 620" aria-hidden="true">
+              <path d="M310 310 310 64M310 310 520 120M310 310 562 330M310 310 438 544M310 310 166 536M310 310 72 332M310 310 112 122" />
+              <circle cx="310" cy="310" r="92" />
+              <circle cx="310" cy="310" r="184" />
+              <circle cx="310" cy="310" r="276" />
+            </svg>
+            <button class="domain-node is-active" type="button" data-domain="0" style="--x: 50%; --y: 8%;">结构</button>
+            <button class="domain-node" type="button" data-domain="1" style="--x: 83%; --y: 18%;">材料</button>
+            <button class="domain-node" type="button" data-domain="2" style="--x: 90%; --y: 54%;">工艺</button>
+            <button class="domain-node" type="button" data-domain="3" style="--x: 72%; --y: 86%;">功能</button>
+            <button class="domain-node" type="button" data-domain="4" style="--x: 30%; --y: 86%;">情绪</button>
+            <button class="domain-node" type="button" data-domain="5" style="--x: 10%; --y: 54%;">象征</button>
+            <button class="domain-node" type="button" data-domain="6" style="--x: 18%; --y: 18%;">用户</button>
+            <div class="radar-core">
+              <span>KEY</span>
+              <small>打开 / 解锁 / 释放</small>
+            </div>
+          </div>
+
+          <aside class="domain-panel">
+            <p class="eyebrow" id="domainKicker">Domain 01</p>
+            <h3 id="domainTitle">结构域：手柄、匙身、牙花、挂孔</h3>
+            <p id="domainBody">钥匙的轮廓不是装饰，它决定握持、识别、携带和插入动作。结构拆开后可以转译成模块、轨道、拼插和游戏关卡。</p>
+            <div class="domain-chips" id="domainChips"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="two-column-story">
+          <article class="essay-card reveal">
+            <p class="eyebrow">Report Script</p>
+            <h2>第一周汇报可以这样讲</h2>
+            <p>
+              我选择钥匙，是因为它太普通了。越普通的物件，越容易被我们忽略。第一周我做的不是设计一个新造型，而是先把钥匙从“开门工具”的固定认知里拆出来。
+            </p>
+            <p>
+              我先看它的结构：手柄让人握住，匙身让它进入锁芯，牙花负责匹配，挂孔让它能随身携带。然后我继续看材料和工艺：传统金属钥匙强调耐久和安全，3D 打印材料则让我想到可替换、可定制、可快速验证的产品可能。
+            </p>
+            <p>
+              这周最后得到的不是一个确定产品，而是一套“钥匙语言”：入口、匹配、权限、旋转、触发、归属。后面的设计都会从这套语言里继续展开。
+            </p>
+          </article>
+          <div class="method-strip reveal">
+            <div><strong>观察</strong><span>物件结构</span></div>
+            <div><strong>拆解</strong><span>材料工艺</span></div>
+            <div><strong>提炼</strong><span>动作逻辑</span></div>
+            <div><strong>转译</strong><span>产品可能</span></div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="next-links section-band" aria-label="页面跳转">
+        <a class="ghost-action" href="./index.html">回到首页</a>
+        <a class="primary-action" href="./week2.html">进入 Week 02</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>Week 01：钥匙的物件拆解。</p>
+      <p>下一页进入“钥匙可以解锁什么”的语义扩展。</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

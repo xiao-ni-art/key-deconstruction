@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 06 | 空间功能界面的情绪设计</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="circuitCanvas" aria-hidden="true"></canvas>
+    <div class="scroll-meter" aria-hidden="true"><span></span></div>
+
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="回到首页">
+        <span class="brand-mark">W06</span>
+        <span>钥匙解域</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="./index.html">首页</a>
+        <a href="./week1.html">Week 01</a>
+        <a href="./week2.html">Week 02</a>
+        <a href="./week3.html">Week 03</a>
+        <a href="./week4.html">Week 04</a>
+        <a href="./week5.html">Week 05</a>
+        <a href="./week6.html">Week 06</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero stage page-hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Week 06 / Emotional Design For Spatial Interfaces</p>
+          <h1>第六周：空间功能界面的情绪设计。</h1>
+          <p class="hero-lead">
+            这一周把“日常情绪机关”进一步落地为双线方案：一条继续探索拉杆、按压、旋转等结构机关；另一条先完成开关、插座外部的装饰情绪模块，用微型场景验证情绪价值。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#dual-track">
+              <span class="action-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 12h13m0 0-5-5m5 5-5 5" /></svg>
+              </span>
+              查看双线方案
+            </a>
+            <a class="ghost-action" href="./assets/week6-frontier-topic.pptx">
+              <span class="action-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6zM14 3v4h4M9 13h6M9 17h4" /></svg>
+              </span>
+              打开原 PPT
+            </a>
+          </div>
+        </div>
+        <figure class="source-map page-figure reveal">
+          <img src="./assets/week6-convenience-socket.png" alt="便利店补给插座效果图" />
+          <figcaption>Week 06 Source / 空间功能界面情绪化落地</figcaption>
+        </figure>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Current Progress</p>
+          <h2>这一周明确了：研究主线一致，产出形式分为两层。</h2>
+        </div>
+        <div class="question-grid">
+          <article class="question-card reveal">
+            <span class="index">A</span>
+            <h3>原阶段继续推进</h3>
+            <p>保留“钥匙解域”中关于开启、触发、仪式动作和状态转换的研究，后续对应涉及结构的情绪机关产品。</p>
+          </article>
+          <article class="question-card reveal">
+            <span class="index">B</span>
+            <h3>当前先做装饰块</h3>
+            <p>基于开关、插座等空间功能点，先完成一组纯装饰化模块，用场景叙事和视觉细节产生情绪价值。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Core Content</p>
+          <h2>作品真正想研究的是：日常空间功能产品如何在不强迫用户参与的情况下，改变人与空间之间的情绪关系。</h2>
+        </div>
+        <div class="insight-grid">
+          <article class="insight-card reveal"><span class="index">01</span><h3>功能</h3><p>开关、插座、门把手、灯具等原本被忽略的空间功能界面。</p></article>
+          <article class="insight-card reveal"><span class="index">02</span><h3>情绪</h3><p>通过仪式动作、视觉装饰和场景联想，让空间产生亲近感。</p></article>
+          <article class="insight-card reveal"><span class="index">03</span><h3>系列</h3><p>最终转化为结构机关产品与装饰化文创模块两个系列。</p></article>
+          <article class="insight-card reveal"><span class="index">04</span><h3>判断</h3><p>关键不是继续做钥匙造型，而是保留钥匙背后的开启关系。</p></article>
+        </div>
+      </section>
+
+      <section id="dual-track" class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Final Output Framework</p>
+          <h2>一个研究主线，两类产品结果。</h2>
+        </div>
+        <div class="essay-layout">
+          <article class="essay-card reveal">
+            <p class="eyebrow">Track 01</p>
+            <h2>结构情绪机关</h2>
+            <p>
+              对应原阶段内容。重点研究拉杆、按压、旋转、滑动等具有仪式感的结构动作，让人通过使用动作感知空间情绪转换。
+            </p>
+            <p>
+              示例包括拉杆式开关、老虎机语义开关、可旋转状态切换器。它负责验证“动作情绪”：用户做出一个动作，空间状态随之改变。
+            </p>
+          </article>
+          <article class="essay-card reveal">
+            <p class="eyebrow">Track 02</p>
+            <h2>装饰情绪模块</h2>
+            <p>
+              对应当前阶段效果图。重点研究开关、插座外部装饰壳体如何通过微型场景、挂件、托盘和主题细节，让空间功能点产生情绪价值。
+            </p>
+            <p>
+              示例包括便利店插座、猫咪开关、奶茶插座、阅读角开关挂架。它负责验证“场景情绪”：用户看到界面，就产生亲近、补给、陪伴或学习的联想。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Why Decorative Modules First</p>
+          <h2>为什么当前先完成纯装饰块？</h2>
+        </div>
+        <div class="semantic-table">
+          <article class="semantic-row reveal"><h3>降低结构风险</h3><p>结构交互涉及稳定性、安装安全和模型精度，本阶段制作风险更高。</p></article>
+          <article class="semantic-row reveal"><h3>先验证情绪价值</h3><p>纯装饰块可以先回答核心问题：日常功能点是否能通过场景化设计产生情绪价值。</p></article>
+          <article class="semantic-row reveal"><h3>形成落地分支</h3><p>装饰模块是结课产出中更容易展示完整度的一条可落地分支。</p></article>
+          <article class="semantic-row reveal"><h3>反哺结构产品</h3><p>后续结构产品可以沿用装饰模块形成的主题语言、色彩体系和空间语义。</p></article>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Decorative Module Overview</p>
+          <h2>当前已形成四个装饰方案。</h2>
+        </div>
+        <div class="family-grid">
+          <article class="family-card reveal">
+            <span class="index">01</span>
+            <h3>便利店补给插座</h3>
+            <p>插座从电气接口转化成“便利店能量补给站”，用货架、遮棚和托盘建立补给语义。</p>
+            <dl><div><dt>功能价值</dt><dd>保留插电功能，增加手机临时放置区域。</dd></div><div><dt>情绪结论</dt><dd>充电像给设备和人一起补货。</dd></div></dl>
+          </article>
+          <article class="family-card reveal">
+            <span class="index">02</span>
+            <h3>猫咪陪伴开关</h3>
+            <p>开关被转译为“猫屋入口”，猫耳、爪印、毛线球和鱼形挂件建立陪伴语义。</p>
+            <dl><div><dt>功能价值</dt><dd>底部挂钩可放钥匙和小挂件。</dd></div><div><dt>情绪结论</dt><dd>开灯像进入柔软的陪伴空间。</dd></div></dl>
+          </article>
+          <article class="family-card reveal">
+            <span class="index">03</span>
+            <h3>奶茶补给插座</h3>
+            <p>插座被转译为饮品柜台，用杯子、吸管、外卖袋和台面制造消费场景。</p>
+            <dl><div><dt>功能价值</dt><dd>适合咖啡店、奶茶店、学习桌或宿舍。</dd></div><div><dt>情绪结论</dt><dd>冰冷插座变成轻松暂停的生活节点。</dd></div></dl>
+          </article>
+          <article class="family-card reveal">
+            <span class="index">04</span>
+            <h3>阅读角开关挂架</h3>
+            <p>开关被转译为阅读角，书本、云朵、蜡笔和书包挂件形成儿童学习语义。</p>
+            <dl><div><dt>功能价值</dt><dd>挂钩承载钥匙、小挂件或儿童小物。</dd></div><div><dt>情绪结论</dt><dd>开灯成为进入阅读和游戏状态的提示。</dd></div></dl>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Visual Outcomes</p>
+          <h2>四个效果方案把墙面功能点变成小型场景。</h2>
+        </div>
+        <div class="photo-grid reveal">
+          <figure class="field-photo large">
+            <img src="./assets/week6-convenience-socket.png" alt="便利店补给插座效果图" />
+            <figcaption>便利店补给插座：充电变成补给。</figcaption>
+          </figure>
+          <figure class="field-photo">
+            <img src="./assets/week6-cat-switch.png" alt="猫咪陪伴开关效果图" />
+            <figcaption>猫咪陪伴开关：开灯变成被陪伴。</figcaption>
+          </figure>
+          <figure class="field-photo">
+            <img src="./assets/week6-milk-tea-socket.png" alt="奶茶补给插座效果图" />
+            <figcaption>奶茶补给插座：插电变成轻松暂停。</figcaption>
+          </figure>
+          <figure class="field-photo">
+            <img src="./assets/week6-reading-switch.png" alt="阅读角开关挂架效果图" />
+            <figcaption>阅读角开关挂架：开关变成学习入口。</figcaption>
+          </figure>
+          <figure class="field-photo">
+            <img src="./assets/week6-white-model-installed.jpg" alt="白模安装验证照片" />
+            <figcaption>白模落地验证：从效果图进入真实安装尺度。</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Parametric And 3D Printing</p>
+          <h2>第六周开始验证模块化结构和 3D 打印落地。</h2>
+        </div>
+        <div class="network-layout reveal">
+          <figure class="source-map compact-map">
+            <img src="./assets/week6-model-screen.png" alt="猫咪主题模型界面截图" />
+            <figcaption>参数化建模：模块化结构与猫咪主题第一版。</figcaption>
+          </figure>
+          <article class="essay-card">
+            <p class="eyebrow">Model Logic</p>
+            <h2>参数化模块化结构设计</h2>
+            <p>
+              模型被拆成底座底壳、顶部模块、底部模块、悬挂模块等部分。这样的结构方便回退、调整和重塑，也方便对接后续生产。
+            </p>
+            <p>
+              当前验证重点不是一次完成最终产品，而是确认安装难易程度、3D 打印外观程度、模块组合方式和真实面板尺寸是否可行。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Prototype Evidence</p>
+          <h2>白模和打印件证明方案正在从图像走向实体。</h2>
+        </div>
+        <div class="photo-grid reveal">
+          <figure class="field-photo">
+            <img src="./assets/week6-print-part-a.jpeg" alt="3D 打印部件手持验证" />
+            <figcaption>单个打印部件：验证尺寸、边缘和手感。</figcaption>
+          </figure>
+          <figure class="field-photo">
+            <img src="./assets/week6-print-parts.jpeg" alt="3D 打印模块零件" />
+            <figcaption>模块拆件：顶部、底部、挂件与底壳分离。</figcaption>
+          </figure>
+          <figure class="field-photo large">
+            <img src="./assets/week6-install-test.jpeg" alt="装饰模块安装测试" />
+            <figcaption>安装测试：确认产品与真实墙面面板的关系。</figcaption>
+          </figure>
+          <figure class="field-photo">
+            <img src="./assets/week6-structure-test.jpeg" alt="结构测试照片" />
+            <figcaption>结构测试：托盘与外框的承重和组合验证。</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Next Plan</p>
+          <h2>下一步要补充什么？</h2>
+        </div>
+        <div class="pipeline reveal">
+          <div class="pipeline-steps">
+            <div><span>01</span><strong>明确首发系列</strong><p>优先选择便利店插座和猫咪开关，形成一插座一开关的基础组合。</p></div>
+            <div><span>02</span><strong>完善模型外观</strong><p>继续修正当前粗糙部分，让效果图和打印模型更一致。</p></div>
+            <div><span>03</span><strong>补结构草模</strong><p>用纸板或 3D 打印制作拉杆式开关，证明结构线仍在推进。</p></div>
+            <div><span>04</span><strong>补尺寸安装</strong><p>以真实面板尺寸为基准，确定外框厚度、挂钩位置、托盘承重。</p></div>
+            <div><span>05</span><strong>补场景包装</strong><p>完成卧室、宿舍、店铺、儿童房场景，以及文创命名、色卡和主题标签。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <article class="week-output reveal">
+          <p class="eyebrow">Week 06 Conclusion</p>
+          <h2>第六周结论</h2>
+          <p>
+            本研究从钥匙的“开启与转换”关系出发，将空间中的开关、插座等功能界面重新设计为情绪载体。第六周进一步明确：最终产出不是单一产品，而是两类互补结果。
+          </p>
+          <p>
+            结构情绪机关负责动作仪式，装饰情绪模块负责场景情绪。它们共同让被忽略的功能点被重新看见，让空间在日常使用中自然产生情绪价值。
+          </p>
+        </article>
+      </section>
+
+      <section class="archive section-band">
+        <div class="archive-copy reveal">
+          <p class="eyebrow">Original PPT</p>
+          <h2>第六周原始 PPT 已作为档案保留。</h2>
+          <p>PPT 中包含双线方案、四个装饰效果、参数化结构、3D 打印验证和后续深化计划。</p>
+          <a class="primary-action" href="./assets/week6-frontier-topic.pptx">打开第六周 PPT 原件</a>
+        </div>
+      </section>
+
+      <nav class="next-links section-band" aria-label="页面跳转">
+        <a class="ghost-action" href="./week5.html">返回 Week 05</a>
+        <a class="primary-action" href="./index.html">回到首页</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>Week 06：空间功能界面的情绪设计。</p>
+      <p>结构负责动作体验，装饰负责场景情绪。</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

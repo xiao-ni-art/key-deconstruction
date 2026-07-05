@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 04 | 制作现场与 3D 打印实践</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="circuitCanvas" aria-hidden="true"></canvas>
+    <div class="scroll-meter" aria-hidden="true"><span></span></div>
+
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="回到首页">
+        <span class="brand-mark">W04</span>
+        <span>钥匙解域</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="./index.html">首页</a>
+        <a href="./week1.html">Week 01</a>
+        <a href="./week2.html">Week 02</a>
+        <a href="./week3.html">Week 03</a>
+        <a href="./week4.html">Week 04</a>
+        <a href="./week5.html">Week 05</a>
+        <a href="./week6.html">Week 06</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero stage page-hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Week 04 / Making Field</p>
+          <h1>第四周：把钥匙研究放回制作现场。</h1>
+          <p class="hero-lead">
+            第四周不再只停留在概念网络里，而是回到真实的制作环境：工作台、材料、工具、电脑、打印机和空间秩序。钥匙的“打开”在这里变成从想法到样机的通道。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#field">
+              <span class="action-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 12h13m0 0-5-5m5 5-5 5" /></svg>
+              </span>
+              查看现场分析
+            </a>
+            <a class="ghost-action" href="./week5.html">
+              <span class="action-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 12h13m0 0-5-5m5 5-5 5" /></svg>
+              </span>
+              进入第五周
+            </a>
+          </div>
+        </div>
+        <figure class="source-map page-figure reveal">
+          <img src="./assets/week4-overview.jpg" alt="第四周制作现场总览照片" />
+          <figcaption>Week 04 Source / 个人制作现场与 3D 打印环境</figcaption>
+        </figure>
+      </section>
+
+      <section id="field" class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Field Observation</p>
+          <h2>第四周的核心不是“想一个产品”，而是观察产品如何被做出来。</h2>
+        </div>
+        <div class="field-grid">
+          <article class="field-card reveal">
+            <span class="index">01</span>
+            <h3>工作台是入口</h3>
+            <p>桌面看似只是摆放工具的地方，但它决定了设计从哪里开始。干净的空桌面像一个可被开启的空间，任何草图、模型、材料都可以在这里被放大成下一步。</p>
+          </article>
+          <article class="field-card reveal">
+            <span class="index">02</span>
+            <h3>材料是钥匙</h3>
+            <p>线材、纸盒、零件、废料和工具不是杂物，它们都是进入不同制作路径的钥匙。材料的硬度、颜色、尺寸和可加工性会反过来决定方案能不能成立。</p>
+          </article>
+          <article class="field-card reveal">
+            <span class="index">03</span>
+            <h3>设备是锁芯</h3>
+            <p>3D 打印机像一个把数字模型转为实体的锁芯。模型能否成功输出，取决于喷嘴、平台、切片参数、支撑结构和材料状态是否彼此匹配。</p>
+          </article>
+          <article class="field-card reveal">
+            <span class="index">04</span>
+            <h3>失败是反馈</h3>
+            <p>打印失败、材料堆积、桌面混乱并不只是问题，它们暴露了流程里的阻塞点。第四周开始把失败看成设计信息，而不是单纯的错误。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Visual Evidence</p>
+          <h2>PDF 中的现场照片被转化为网页里的观察证据。</h2>
+        </div>
+        <div class="photo-grid reveal">
+          <figure class="field-photo large">
+            <img src="./assets/week4-desk.jpg" alt="清空后的工作台" />
+            <figcaption>空桌面：为草图、拆解和组装预留的起点。</figcaption>
+          </figure>
+          <figure class="field-photo">
+            <img src="./assets/week4-computer.jpg" alt="电脑界面与工作台" />
+            <figcaption>电脑界面：参数、模型和资料进入制作流程。</figcaption>
+          </figure>
+          <figure class="field-photo">
+            <img src="./assets/week4-printer.jpg" alt="3D 打印机设备" />
+            <figcaption>打印机：把数字模型转换成实体样机。</figcaption>
+          </figure>
+          <figure class="field-photo">
+            <img src="./assets/week4-materials.jpg" alt="材料和纸盒" />
+            <figcaption>材料区：纸盒、卷材、工具共同构成制作资源。</figcaption>
+          </figure>
+          <figure class="field-photo">
+            <img src="./assets/week4-shelf.jpg" alt="工具架和材料架" />
+            <figcaption>工具架：秩序与混乱并存的制作后台。</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="two-column-story">
+          <article class="essay-card reveal">
+            <p class="eyebrow">Research Translation</p>
+            <h2>从“钥匙”到“制作系统”</h2>
+            <p>
+              前三周里，钥匙被拆解成结构、语义和产品方向。第四周我开始把它放回真实制作现场：如果钥匙意味着打开，那么工作台就是打开设计过程的第一个场域。
+            </p>
+            <p>
+              一件产品不是突然出现的，它需要经历资料收集、模型生成、材料选择、切片设置、打印测试、失败修正和最终装配。这个过程本身像一把复杂的钥匙，每一步都要和下一步匹配。
+            </p>
+            <p>
+              因此第四周的重点是建立“制作链路意识”：不是只展示一个结果，而是展示结果怎样从环境、工具和反复试错中被打开。
+            </p>
+          </article>
+          <div class="method-strip reveal">
+            <div><strong>环境</strong><span>桌面 / 光线 / 空间</span></div>
+            <div><strong>工具</strong><span>电脑 / 打印机 / 辅助工具</span></div>
+            <div><strong>材料</strong><span>线材 / 纸盒 / 废料</span></div>
+            <div><strong>流程</strong><span>建模 / 切片 / 打印 / 修正</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Making Logic</p>
+          <h2>第四周把设计实践拆成五个可汇报的环节。</h2>
+        </div>
+        <div class="pipeline reveal">
+          <div class="pipeline-steps">
+            <div><span>01</span><strong>清理场地</strong><p>让桌面从杂乱状态变成可工作的起点，先打开空间。</p></div>
+            <div><span>02</span><strong>确认资源</strong><p>盘点线材、工具、设备和零件，判断哪些方案可做。</p></div>
+            <div><span>03</span><strong>连接电脑</strong><p>用电脑完成资料、建模、参数设置和输出准备。</p></div>
+            <div><span>04</span><strong>打印样机</strong><p>通过 3D 打印把抽象想法转化成可触摸的测试对象。</p></div>
+            <div><span>05</span><strong>修正反馈</strong><p>把失败样机、废料和问题记录重新输入下一轮设计。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Connection To Key Project</p>
+          <h2>它和“钥匙解域”的关系在哪里？</h2>
+        </div>
+        <div class="semantic-table">
+          <article class="semantic-row reveal">
+            <h3>打开空间</h3>
+            <p>清理工作台让制作可以发生，对应钥匙从封闭到开放的状态转换。</p>
+          </article>
+          <article class="semantic-row reveal">
+            <h3>匹配参数</h3>
+            <p>打印机、材料和模型必须匹配，类似钥匙牙花与锁芯之间的对应关系。</p>
+          </article>
+          <article class="semantic-row reveal">
+            <h3>接管流程</h3>
+            <p>电脑和设备共同接管想法，把概念导入一条可执行的制造链路。</p>
+          </article>
+          <article class="semantic-row reveal">
+            <h3>重构废料</h3>
+            <p>失败和废料被重新理解为下一轮设计的材料，而不是被遗弃的终点。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <article class="week-output reveal">
+          <p class="eyebrow">Week 04 Conclusion</p>
+          <h2>第四周结论</h2>
+          <p>
+            第四周让我意识到，钥匙的“解锁”不只存在于概念里，也存在于制作流程里。一个设计能否被打开，取决于空间是否可用、材料是否合适、设备是否稳定、参数是否匹配，以及失败能否被重新理解。
+          </p>
+          <p>
+            这周把研究从“想法”推进到“现场”：钥匙不只是产品形象，也是一种组织制作过程的方法。
+          </p>
+        </article>
+      </section>
+
+      <section class="archive section-band">
+        <div class="archive-copy reveal">
+          <p class="eyebrow">Original PDF</p>
+          <h2>原始 PDF 已作为档案保留。</h2>
+          <p>如果浏览器支持 PDF 预览，可以直接在下方查看；也可以点击按钮打开原文件。</p>
+        </div>
+        <object class="pdf-frame reveal" data="./assets/week4-frontier-design.pdf" type="application/pdf">
+          <p><a href="./assets/week4-frontier-design.pdf">打开第四周 PDF 原件</a></p>
+        </object>
+      </section>
+
+      <nav class="next-links section-band" aria-label="页面跳转">
+        <a class="ghost-action" href="./week3.html">返回 Week 03</a>
+        <a class="primary-action" href="./week5.html">进入 Week 05</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>Week 04：制作现场、材料与 3D 打印实践。</p>
+      <p>钥匙的解锁逻辑被转化为从想法到样机的制作链路。</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 03 | 产品设计与 3D 打印方向</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="circuitCanvas" aria-hidden="true"></canvas>
+    <div class="scroll-meter" aria-hidden="true"><span></span></div>
+
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="回到首页">
+        <span class="brand-mark">W03</span>
+        <span>钥匙解域</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="./index.html">首页</a>
+        <a href="./week1.html">Week 01</a>
+        <a href="./week2.html">Week 02</a>
+        <a href="./week3.html">Week 03</a>
+        <a href="./week4.html">Week 04</a>
+        <a href="./week5.html">Week 05</a>
+        <a href="./week6.html">Week 06</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero stage page-hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Week 03 / Product And 3D Printing</p>
+          <h1>第三周：把发散网络变成产品方向。</h1>
+          <p class="hero-lead">
+            第三周的重点是建立不同发散网络之间的联系：钥匙、玩具、打印机、手机、电脑、AI agents、废料、收纳盒和灯具，都可以被连接成一个产品设计系统。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#products">
+              <span class="action-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 12h13m0 0-5-5m5 5-5 5" /></svg>
+              </span>
+              看产品方向
+            </a>
+            <a class="ghost-action" href="./week4.html">
+              <span class="action-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 12h13m0 0-5-5m5 5-5 5" /></svg>
+              </span>
+              进入第四周
+            </a>
+          </div>
+        </div>
+        <figure class="source-map page-figure reveal">
+          <img src="./assets/week3-network.jpg" alt="第三周钥匙发散网络与产品设计方向图" />
+          <figcaption>Week 03 Source Map / 产品、3D 打印与 AI 生成网络</figcaption>
+        </figure>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Network Logic</p>
+          <h2>第三周我不再继续扩散，而是开始收束。</h2>
+        </div>
+        <div class="essay-layout">
+          <article class="essay-card reveal">
+            <h3>从关键词到产品结构</h3>
+            <p>
+              第二周得到的是大量动词，第三周我需要判断哪些动词能变成产品。不是所有词都适合直接做成物件，所以我把它们放进“结构、功能、材料、设备、用户体验”五个维度里重新筛选。
+            </p>
+            <p>
+              比如“折叠”可以变成收纳盒，“对齐”可以变成卡扣，“连接”可以变成模块接口，“封存”可以变成容器，“重构”可以变成废料再利用，“解码”可以变成 AI 生成模型。
+            </p>
+          </article>
+          <div class="method-strip reveal">
+            <div><strong>语义</strong><span>解锁 / 折叠 / 连接</span></div>
+            <div><strong>结构</strong><span>卡扣 / 铰链 / 模块</span></div>
+            <div><strong>工艺</strong><span>FDM / SLA / 拼装</span></div>
+            <div><strong>产品</strong><span>玩具 / 收纳 / 灯具</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Product Directions</p>
+          <h2>我把第三周收束为四个可继续发展的产品方向。</h2>
+        </div>
+
+        <div class="design-grid">
+          <article class="design-card reveal">
+            <span class="index">A</span>
+            <h3>模块钥匙玩具</h3>
+            <p>把钥匙的“匹配”和“解锁”转成可玩机制。孩子需要通过不同牙花模块、旋转角度和卡扣位置来打开小机关。</p>
+            <dl>
+              <div><dt>来源动词</dt><dd>解锁 / 对齐 / 连接</dd></div>
+              <div><dt>3D 打印重点</dt><dd>卡扣公差、模块强度、边缘圆角</dd></div>
+              <div><dt>体验目标</dt><dd>让学习像闯关一样发生</dd></div>
+            </dl>
+          </article>
+          <article class="design-card reveal">
+            <span class="index">B</span>
+            <h3>折叠收纳盒</h3>
+            <p>从“折叠”和“封存”出发，把钥匙理解成打开收纳状态的触发器。盒体平时压缩，使用时展开成立体容器。</p>
+            <dl>
+              <div><dt>来源动词</dt><dd>折叠 / 封存 / 展开</dd></div>
+              <div><dt>3D 打印重点</dt><dd>活页结构、薄壁厚度、折线耐久</dd></div>
+              <div><dt>体验目标</dt><dd>把空间从平面解锁成立体</dd></div>
+            </dl>
+          </article>
+          <article class="design-card reveal">
+            <span class="index">C</span>
+            <h3>废料灯具</h3>
+            <p>把 3D 打印废料重新组织成灯罩纹理，让“遗弃”变成“重构”。废料不再是失败痕迹，而成为发光的材料记忆。</p>
+            <dl>
+              <div><dt>来源动词</dt><dd>遗弃 / 重构 / 透光</dd></div>
+              <div><dt>3D 打印重点</dt><dd>半透明材料、孔洞密度、热安全</dd></div>
+              <div><dt>体验目标</dt><dd>把废弃物重新解锁为价值</dd></div>
+            </dl>
+          </article>
+          <article class="design-card reveal">
+            <span class="index">D</span>
+            <h3>AI 参数化钥匙系统</h3>
+            <p>把 AI agents 作为设计辅助钥匙：输入语义关键词，生成不同齿形、纹理和模块关系，再通过 3D 打印验证。</p>
+            <dl>
+              <div><dt>来源动词</dt><dd>解码 / 生成 / 迭代</dd></div>
+              <div><dt>3D 打印重点</dt><dd>参数化模型、可替换齿形、快速样机</dd></div>
+              <div><dt>体验目标</dt><dd>让想法快速变成可触摸模型</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading reveal">
+          <p class="eyebrow">3D Printing Strategy</p>
+          <h2>第三周还需要说明：为什么这些方向适合 3D 打印？</h2>
+        </div>
+        <div class="spec-grid">
+          <article class="spec-card reveal">
+            <h3>快速验证</h3>
+            <p>钥匙系统的核心在于“匹配关系”，需要反复试卡扣、公差和手感。3D 打印可以快速做出多个版本，而不是一次定稿。</p>
+          </article>
+          <article class="spec-card reveal">
+            <h3>个性化齿形</h3>
+            <p>每个人都可以拥有不同钥匙形态。牙花、纹理、颜色和挂孔可以参数化变化，形成个人身份感。</p>
+          </article>
+          <article class="spec-card reveal">
+            <h3>复杂结构</h3>
+            <p>折叠铰链、蜂窝加强、内部空腔、灯罩孔洞这些结构用传统方式成本较高，但适合用打印进行小批量实验。</p>
+          </article>
+          <article class="spec-card reveal">
+            <h3>废料再利用</h3>
+            <p>打印失败的边角料可以成为灯具、纹理或填充材料。它让“失败样机”也进入设计循环。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="pipeline reveal">
+          <p class="eyebrow">Workflow</p>
+          <h2>后续如果继续深化，我会按这个流程推进。</h2>
+          <div class="pipeline-steps">
+            <div><span>01</span><strong>选定方向</strong><p>从四个方向中选择一个主方案，例如模块钥匙玩具。</p></div>
+            <div><span>02</span><strong>建立模型</strong><p>用参数化方式建立钥匙牙花、卡扣、盒体或灯罩纹理。</p></div>
+            <div><span>03</span><strong>打印样机</strong><p>用 PLA 做第一版结构，用 TPU 或 PETG 测试柔性和耐久。</p></div>
+            <div><span>04</span><strong>用户测试</strong><p>观察用户是否能理解“解锁”动作，是否愿意反复玩或使用。</p></div>
+            <div><span>05</span><strong>产品叙事</strong><p>把最终产品讲成“从封闭到打开”的体验系统，而不只是一个造型。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <article class="week-output reveal">
+          <p class="eyebrow">Week 03 Conclusion</p>
+          <h2>第三周结论</h2>
+          <p>
+            第三周我把前两周的“钥匙语言”转成产品设计方法：钥匙不一定要被做成钥匙形状，它可以成为一套关于匹配、打开、收纳、重构和生成的产品系统。
+          </p>
+          <p>
+            最有潜力的方向是“模块化钥匙玩具 + 参数化生成系统”：它既保留钥匙的开锁动作，也能体现 3D 打印可定制、可迭代、可小批量制造的优势。
+          </p>
+        </article>
+      </section>
+
+      <nav class="next-links section-band" aria-label="页面跳转">
+        <a class="ghost-action" href="./week2.html">返回 Week 02</a>
+        <a class="primary-action" href="./week4.html">进入 Week 04</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>Week 03：产品设计、3D 打印与 AI 生成方向。</p>
+      <p>发散网络最终被收束为可制造、可测试、可叙述的产品系统，并进入真实制作现场。</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
